@@ -10,7 +10,12 @@ function openInFeloSearch(url, tab, inNewTab = false) {
     }
 }
 
-// 當擴充功能安裝或更新時，建立右鍵選單
+// 工具列按鈕點擊事件
+chrome.action.onClicked.addListener((tab) => {
+    openInFeloSearch(tab.url, tab, true);
+});
+
+// 建立右鍵選單
 chrome.runtime.onInstalled.addListener(() => {
     // 為超連結建立右鍵選單
     chrome.contextMenus.create({
@@ -28,7 +33,7 @@ chrome.runtime.onInstalled.addListener(() => {
     chrome.contextMenus.create({
         id: "searchWithFelo",
         title: "彙整此頁",
-        contexts: ["page"],
+        contexts: ["page", "image", "video", "audio"],
     });
 });
 
@@ -45,11 +50,6 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
             openInFeloSearch(info.linkUrl, tab, true);
             break;
     }
-});
-
-// 處理工具列按鈕點擊事件
-chrome.action.onClicked.addListener((tab) => {
-    openInFeloSearch(tab.url, tab, true);
 });
 
 // 處理快捷鍵事件
