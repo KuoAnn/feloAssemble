@@ -1,6 +1,6 @@
 {
-  "name": "Felo Assemble",
-  "description": "快速將當前頁面搜尋至 Felo",
+  "name": "Felo Search 彙整",
+  "description": "快速使用 Felo Search 彙整目前頁面的資訊",
   "version": "1.0",
   "manifest_version": 3,
   "background": {
@@ -8,7 +8,7 @@
   },
   "permissions": [
     "contextMenus",
-    "activeTab"
+    "tabs"
   ],
   "action": {
     "default_icon": {
@@ -16,11 +16,25 @@
       "48": "images/icon48.png",
       "128": "images/icon128.png"
     },
-    "default_title": "搜尋 Felo"
+    "default_title": "使用 Felo Search 彙整"
   },
   "icons": {
     "16": "images/icon16.png",
     "48": "images/icon48.png",
     "128": "images/icon128.png"
+  },
+  "commands": {
+    "open-in-current-tab": {
+      "suggested_key": {
+        "default": "Alt+S"
+      },
+      "description": "在當前頁面使用 Felo Search 彙整"
+    },
+    "open-in-new-tab": {
+      "suggested_key": {
+        "default": "Alt+Shift+S"
+      },
+      "description": "在新分頁使用 Felo Search 彙整"
+    }
   }
 }
