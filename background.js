@@ -15,19 +15,19 @@ chrome.runtime.onInstalled.addListener(() => {
     // 為超連結建立右鍵選單
     chrome.contextMenus.create({
         id: "feloSearchCurrentTab",
-        title: "使用 Felo Search 彙整",
+        title: "彙整此頁",
         contexts: ["link"],
     });
 
     chrome.contextMenus.create({
         id: "feloSearchNewTab",
-        title: "以新分頁使用 Felo Search 彙整",
+        title: "在新分頁彙整此頁",
         contexts: ["link"],
     });
 
     chrome.contextMenus.create({
         id: "searchWithFelo",
-        title: "Felo Search 彙整",
+        title: "彙整此頁",
         contexts: ["page"],
     });
 });

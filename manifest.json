@@ -28,13 +28,13 @@
       "suggested_key": {
         "default": "Alt+S"
       },
-      "description": "在當前頁面使用 Felo Search 彙整"
+      "description": "彙整此頁"
     },
     "open-in-new-tab": {
       "suggested_key": {
         "default": "Alt+Shift+S"
       },
-      "description": "在新分頁使用 Felo Search 彙整"
+      "description": "在新分頁彙整此頁"
     }
   }
 }
