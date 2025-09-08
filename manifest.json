@@ -1,40 +1,49 @@
 {
-  "name": "Felo Search 彙整",
-  "description": "快速使用 Felo Search 彙整目前頁面的資訊",
-  "version": "1.0",
-  "manifest_version": 3,
-  "background": {
-    "service_worker": "background.js"
-  },
-  "permissions": [
-    "contextMenus",
-    "activeTab"
-  ],
-  "action": {
-    "default_icon": {
-      "16": "images/icon16.png",
-      "48": "images/icon48.png",
-      "128": "images/icon128.png"
-    },
-    "default_title": "使用 Felo Search 彙整"
-  },
-  "icons": {
-    "16": "images/icon16.png",
-    "48": "images/icon48.png",
-    "128": "images/icon128.png"
-  },
-  "commands": {
-    "open-in-current-tab": {
-      "suggested_key": {
-        "default": "Alt+S"
-      },
-      "description": "彙整此頁"
-    },
-    "open-in-new-tab": {
-      "suggested_key": {
-        "default": "Alt+Shift+S"
-      },
-      "description": "在新分頁彙整此頁"
-    }
-  }
+	"name": "Felo Search 彙整",
+	"description": "快速使用 Felo Search 彙整目前頁面的資訊",
+	"version": "1.0",
+	"manifest_version": 3,
+	"background": {
+		"service_worker": "background.js"
+	},
+	"permissions": ["contextMenus", "activeTab"],
+	"action": {
+		"default_icon": {
+			"16": "images/icon16.png",
+			"48": "images/icon48.png",
+			"128": "images/icon128.png"
+		},
+		"default_title": "使用 Felo/Perplexity 彙整摘要"
+	},
+	"icons": {
+		"16": "images/icon16.png",
+		"48": "images/icon48.png",
+		"128": "images/icon128.png"
+	},
+	"commands": {
+		"open-in-current-tab": {
+			"suggested_key": {
+				"default": "Alt+S"
+			},
+			"description": "用 Felo 彙整此頁"
+		},
+		"open-in-new-tab": {
+			"suggested_key": {
+				"default": "Alt+Shift+S"
+			},
+			"description": "用 Felo 在新分頁彙整此頁"
+		},
+		"open-in-current-tab-perplexity": {
+			"suggested_key": {
+				"default": "Alt+P"
+			},
+			"description": "用 Perplexity 彙整此頁"
+		},
+		"open-in-new-tab-perplexity": {
+			"suggested_key": {
+				"default": "Alt+Shift+P"
+			},
+			"description": "用 Perplexity 在新分頁彙整此頁"
+		}
+	}
 }
