@@ -1,7 +1,7 @@
 {
 	"name": "Felo Search 彙整",
 	"description": "快速使用 Felo Search 彙整目前頁面的資訊",
-	"version": "1.0",
+	"version": "1.1",
 	"manifest_version": 3,
 	"background": {
 		"service_worker": "background.js"
